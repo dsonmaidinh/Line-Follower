@@ -103,6 +103,7 @@ int main(void)
 	GPIOB->ODR &= ~((1 << 3) | (1 << 4) | (1 << 5) |(1 << 6));
 	GPIOB->ODR |= (1<<4) | (1<<6);
 	HAL_Delay(100);
+	HAL_Delay(1);
   while (1)
   {
     /* USER CODE END WHILE */
