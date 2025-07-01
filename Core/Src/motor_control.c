@@ -23,8 +23,5 @@ void TurnRight(){
 	GPIOB->ODR &= ~((1 << 3) | (1 << 4) | (1 << 5) |(1 << 6));
 	GPIOB->ODR |= (1<<4) | (1<<6);
 	MotorControl(left_side, 800);
-	for(int16_t i = 800; i>400; i-=20){
-		MotorControl(right_side, i);
-		HAL_Delay(1);
-	}
+	MotorControl(right_side, 400);
 }
